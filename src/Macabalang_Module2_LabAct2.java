@@ -79,15 +79,15 @@ public class Macabalang_Module2_LabAct2 {
             input[i] = sc.nextInt();
         }
 
-        System.out.print("Enter k (number of parts to split into): ");
+        System.out.print("Enter k: ");
         int k = sc.nextInt();
 
         ListNode head = buildList(input);
         ListNode[] parts = solver.splitListToParts(head, k);
 
-        System.out.println("Resulting parts:");
+        System.out.println("Resulting splits:");
         for (int i = 0; i < parts.length; i++) {
-            System.out.print("Part " + (i + 1) + ": ");
+            System.out.print("S" + (i + 1) + ": ");
             printList(parts[i]);
         }
 
