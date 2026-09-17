@@ -24,6 +24,8 @@ public class Macabalang_Module2_LabAct2 {
         int extra = length % k;
 
         node = head;
+
+
         for (int i = 0; i < k; i++) {
             if (node == null) {
                 result[i] = null;
@@ -79,7 +81,7 @@ public class Macabalang_Module2_LabAct2 {
             input[i] = sc.nextInt();
         }
 
-        System.out.print("Enter k: ");
+        System.out.print("Enter number of split: ");
         int k = sc.nextInt();
 
         ListNode head = buildList(input);
