@@ -8,7 +8,7 @@ class ListNode {
     }
 }
 
-public class MyLinkedList {
+public class Macabalang_Module2_LabAct2 {
 
     public ListNode[] splitListToParts(ListNode head, int k) {
         ListNode[] result = new ListNode[k];
@@ -68,7 +68,7 @@ public class MyLinkedList {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        MyLinkedList solver = new MyLinkedList();
+        Macabalang_Module2_LabAct2 solver = new Macabalang_Module2_LabAct2();
 
         System.out.print("Enter number of elements in the list: ");
         int n = sc.nextInt();
