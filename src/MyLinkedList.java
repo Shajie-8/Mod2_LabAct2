@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class ListNode {
     int val;
     ListNode next;
@@ -43,7 +45,6 @@ public class MyLinkedList {
         return result;
     }
 
-    // Helper to build a linked list from an array
     public static ListNode buildList(int[] values) {
         ListNode dummy = new ListNode(0);
         ListNode curr = dummy;
@@ -54,7 +55,6 @@ public class MyLinkedList {
         return dummy.next;
     }
 
-    // Helper to print a linked list part
     public static void printList(ListNode head) {
         StringBuilder sb = new StringBuilder("[");
         while (head != null) {
@@ -67,18 +67,31 @@ public class MyLinkedList {
     }
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         MyLinkedList solver = new MyLinkedList();
 
-        int[] input = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        ListNode head = buildList(input);
-        int k = 3;
+        System.out.print("Enter number of elements in the list: ");
+        int n = sc.nextInt();
 
+        int[] input = new int[n];
+        System.out.println("Enter " + n + " integers:");
+        for (int i = 0; i < n; i++) {
+            input[i] = sc.nextInt();
+        }
+
+        System.out.print("Enter k (number of parts to split into): ");
+        int k = sc.nextInt();
+
+        ListNode head = buildList(input);
         ListNode[] parts = solver.splitListToParts(head, k);
 
-        for (ListNode part : parts) {
-            printList(part);
+        System.out.println("Resulting parts:");
+        for (int i = 0; i < parts.length; i++) {
+            System.out.print("Part " + (i + 1) + ": ");
+            printList(parts[i]);
         }
+
+        sc.close();
     }
 }
-
 
